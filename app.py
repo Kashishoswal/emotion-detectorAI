@@ -7,17 +7,17 @@ import speech_recognition as sr
 from gtts import gTTS
 import base64
 
-# 🎯 Server URLs (Update if deployed)
-EMOTION_SERVER_URL = "http://127.0.0.1:5001/predict"
-COHERE_SERVER_URL = "http://127.0.0.1:5001/cohere_response"
+# ✅ UPDATE: Use your actual deployed Flask backend URL
+BACKEND_URL = "https://emotion-detectorai.onrender.com"
+EMOTION_SERVER_URL = f"{BACKEND_URL}/predict"
+COHERE_SERVER_URL = f"{BACKEND_URL}/cohere_response"
 
-# 🎙 Audio settings
+# File settings
 FILENAME = "recorded_audio.wav"
 DURATION = 7  # seconds
 SAMPLE_RATE = 16000  # Hz
 
-# 🎨 Page settings
-st.set_page_config(page_title="Emotion-Based AI Chatbot", layout="centered")
+st.set_page_config(page_title="Emotion-Based AI Chatbot", lay
 
 # 🎨 Function to set background image
 def set_background(image_path):
