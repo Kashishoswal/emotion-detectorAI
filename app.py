@@ -17,7 +17,7 @@ FILENAME = "recorded_audio.wav"
 DURATION = 7  # seconds
 SAMPLE_RATE = 16000  # Hz
 
-st.set_page_config(page_title="Emotion-Based AI Chatbot", lay
+st.set_page_config(page_title="Emotion-Based AI Chatbot", lay)
 
 # 🎨 Function to set background image
 def set_background(image_path):
