@@ -1,37 +1,52 @@
-😊 Emotion Detector AI
-Emotion Detector AI is a machine learning–based application that analyzes facial expressions to detect human emotions in real time. The project demonstrates the practical application of computer vision and deep learning for emotion recognition from images or live video input.
+# Emotion-Aware AI Chatbot
 
-🚀 Features
-Detects human emotions from facial expressions
-Supports multiple emotion classes (e.g., happy, sad, angry, neutral, surprised)
-Uses a trained deep learning model for accurate prediction
-Can work with static images or real-time webcam input
-Lightweight and easy to run locally
+An AI-driven chatbot that understands the user's **emotional tone from speech** and responds with more empathetic, context-aware answers. The system combines a Flask backend with a Streamlit UI, and uses a speech emotion recognition pipeline powered by **Wav2Vec2** along with LLM responses via the **Cohere API**.
 
-🛠️ Tech Stack
-Programming Language: Python
-Libraries & Frameworks:
-TensorFlow / Keras
-OpenCV
-NumPy
-Model Type: Convolutional Neural Network (CNN)
+---
 
-🧠 How It Works
-Captures an image or video frame
-Detects the face using computer vision techniques
-Preprocesses the face region
-Passes the data to a trained CNN model
-Predicts and displays the detected emotion
+## 🚀 Key Features
+- **Speech-based emotion recognition** using Wav2Vec2 (audio → emotion label)
+- **Emotion-aware responses**: chatbot adapts tone based on detected emotion
+- **Web UI built with Streamlit** for a simple, interactive user experience
+- **Flask backend API** to handle inference + response orchestration
+- Modular design to swap emotion model / LLM provider easily
 
-🎯 Use Cases
-Human–computer interaction
-Mental health and mood analysis
-Emotion-aware applications
-Educational projects in AI & computer vision
+---
 
-🌱 Future Enhancements
-Improve accuracy with a larger dataset
-Add real-time emotion tracking dashboard
-Deploy as a web application
-Support more emotion categories
+## 🧠 How It Works
+1. User provides voice input (audio)
+2. Audio is processed and passed to **Wav2Vec2** to detect emotion
+3. Detected emotion + user message is sent to the chatbot pipeline
+4. **Cohere API** generates a response with the appropriate tone
+5. Response is displayed in the Streamlit UI
 
+---
+
+## 🛠️ Tech Stack
+- **Backend:** Python, Flask
+- **Frontend/UI:** Streamlit
+- **Speech Emotion Model:** Wav2Vec2
+- **LLM / Text Generation:** Cohere API
+
+---
+
+## 📌 Skills / Concepts Demonstrated
+- Speech processing & ML inference
+- API design with Flask
+- Rapid UI prototyping with Streamlit
+- Prompting / response conditioning using emotion signals
+- End-to-end integration of ML + web app
+
+---
+
+## 🌱 Future Enhancements
+- Multi-language speech emotion detection
+- Session memory + conversation history
+- Better calibration of emotion confidence scores
+- Deploy to cloud (Render/AWS) with a persistent backend
+
+---
+
+## 👩‍💻 Author
+**Kashish Oswal**  
+GitHub: https://github.com/Kashishoswal
